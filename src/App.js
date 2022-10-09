@@ -5,7 +5,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Typography from "@mui/material/Typography";
-import {DarkMode, LightMode, MenuRounded} from "@mui/icons-material";
+import {DarkMode, LightMode, MenuRounded, StickyNote2} from "@mui/icons-material";
 import {ThemeProvider} from '@mui/material/styles';
 import {createContext, useContext, useMemo, useState} from "react";
 
@@ -26,13 +26,11 @@ function App() {
             <Container maxWidth="sm" sx={{minHeight: "inherit"}}>
                 <AppBar position="static">
                     <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="menu" sx={{mr: 2}}>
-                            <MenuRounded/>
-                        </IconButton>
+                        <StickyNote2 sx={{mr: 1}}/>
                         <Typography variant="h5" color="inherit" component="div">
                             Notes
                         </Typography>
-                        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ml: "auto"}}
+                        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ml: "auto", mr: "-8px"}}
                                     onClick={colorMode.toggleColorMode}>
                             {theme.palette.mode !== 'dark' ? <DarkMode/> : <LightMode/>}
                         </IconButton>
